@@ -27,7 +27,23 @@ const socialLinks = [
   },
 ];
 
-
+const whereNextLinks = [
+  {
+    url: '',
+    text: 'See my zoomies',
+    active: true,
+  },
+  {
+    url: '',
+    text: 'Watch me binky',
+    active: true,
+  },
+  {
+    url: '',
+    text: 'Nom Nom is the way',
+    active: true,
+  },
+]
 
 function createSocialLinks() {
   const socialLinksElement = document.getElementById("socialRow");
@@ -47,4 +63,18 @@ function createSocialLinks() {
   }
 }
 
+function createWhiteButtons() {
+  const whereNextElement = document.getElementById('whereNext');
+  for (let link of whereNextLinks) {
+    if (link.active){
+      const a = document.createElement('a');
+      a.setAttribute("href", link.url);
+      a.classList.add("whiteButton");
+      a.innerHTML = link.text;
+      whereNextElement.appendChild(a);
+    }
+  }
+}
+
 createSocialLinks();
+createWhiteButtons();
