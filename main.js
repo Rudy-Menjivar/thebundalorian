@@ -1,19 +1,25 @@
+const creatorDetails = {
+  accountHandle: '@thebundalorian',
+  creatorName: ' - the bundalorian',
+  tagline: 'this is the (binky) way..',
+  profilePic: './assets/profile-pic.jpg',
+}
 
 const socialLinks = [
   {
-    url: '',
+    url: 'tiktok.com/@thebundalorian',
     iconName: 'tiktok',
     active: true,
   },
   {
-    url: '',
+    url: 'http://www.youtube.com/@bundalorian',
     iconName: 'youtube',
     active: true,
   },
   {
     url: '',
     iconName: 'twitter',
-    active: true,
+    active: false,
   },
   {
     url: '',
@@ -21,7 +27,7 @@ const socialLinks = [
     active: false,
   },
   {
-    url: '',
+    url: 'https://www.instagram.com/thebundalorian/',
     iconName: 'instagram',
     active: true,
   },
@@ -45,6 +51,20 @@ const whereNextLinks = [
   },
 ]
 
+function createAccountDetails() {
+  const accountHandleElement = document.getElementById('accountHandle');
+  const nameElement = document.getElementById('creatorName');
+  const taglineElement = document.getElementById('tagline');
+  accountHandleElement.innerHTML = creatorDetails.accountHandle;
+  nameElement.innerHTML = creatorDetails.creatorName;
+  taglineElement.innerHTML = creatorDetails.tagline;
+  const profilePicWrapperElement = document.getElementById('profilePicContainer');
+  const imageElement = document.createElement('img');
+  imageElement.setAttribute('src',creatorDetails.profilePic);
+  imageElement.classList.add('profileImage');
+  profilePicWrapperElement.appendChild(imageElement);
+}
+
 function createSocialLinks() {
   const socialLinksElement = document.getElementById("socialRow");
   for (let link of socialLinks) {
@@ -52,12 +72,9 @@ function createSocialLinks() {
       const i = document.createElement('i');
       i.classList.add('fa-brands');
       i.classList.add(`fa-${link.iconName}`);
-
       const a = document.createElement('a');
       a.setAttribute("href", link.url);
-
       a.appendChild(i);
-
       socialLinksElement.appendChild(a);
     }
   }
@@ -76,5 +93,6 @@ function createWhiteButtons() {
   }
 }
 
+createAccountDetails();
 createSocialLinks();
 createWhiteButtons();

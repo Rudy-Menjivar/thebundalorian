@@ -26,11 +26,11 @@ body {
   padding-top: 16px;
 }
 
-.accountName {
+#accountName {
   font-size: 0.9em;
 }
 
-.tagline {
+#tagline {
   font-size: 1.4em;
   text-transform: capitalize;
 }
