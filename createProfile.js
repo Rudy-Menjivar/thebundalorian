@@ -32,7 +32,7 @@ export function createSocialLinks() {
   }
 }
 
-export function createWhiteButtons() {
+export function createNextButtons() {
   const whereNextElement = document.getElementById('whereNext');
   for (let link of whereNextLinks) {
     if (link.active){

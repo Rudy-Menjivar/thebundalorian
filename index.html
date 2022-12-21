@@ -8,6 +8,7 @@
     src="https://kit.fontawesome.com/94eeba7e1c.js"
     crossorigin="anonymous">
   </script>
+  <script src="https://js.stripe.com/v3/"></script>
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
@@ -69,11 +70,27 @@
 
   <section class="supportMe">
     <h2>Support my content</h2>
-    <button class="whiteButton">Buy me a treat 🍪</button>
+    <button id="buyMeATreat" class="whiteButton">Buy me a treat 🍪</button>
   </section>
-  <div class="modalBackground">
+  <div id="modal" class="modalBackground hidden">
     <div class="modalContent">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus corporis corrupti fugit architecto ex cum tempore a ut est. Sapiente voluptatum odit nihil deserunt soluta magni libero aut rem nostrum!
+      <h2>You're Awesome!</h2>
+      <p class="modalSubHeading">How many treats would you like to buy me?</p>
+      <div id="products">
+        <div class="product" data-productCode="oneTreat">
+          🍪
+          <div class="amount">$5</div>
+        </div>
+        <div class="product" data-productCode="twoTreats">
+          🍪🍪
+          <div class="amount">$10</div>
+        </div>
+        <div class="product" data-productCode="fourTreats">
+          🍪🍪🍪🍪
+          <div class="amount">$20</div>
+        </div>
+      </div>
+      <span id="stripeSpinner" class="loader hidden"></span>
     </div>
   </div>
 </body>
