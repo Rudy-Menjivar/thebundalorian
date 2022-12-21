@@ -30,25 +30,42 @@
     <h2>Join my newsletter</h2>
     <div class="card">
       <p>Get weekly tips and bunny gear</p>
-      <form action="">
+      <form id="subscriberForm" action="">
         <div class="formFields">
           <label for="first_name">
             <span>First Name</span>
-            <input type="text" name="first_name" placeholder="Your First Name" />
+            <input 
+              type="text" 
+              name="first_name" 
+              placeholder="First Name" 
+              required
+          />
           </label>
           <label for="email">
             <span>Email</span>
-            <input type="email" placeholder="Your Email" />
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="Email"
+              required
+            />
           </label>
         </div>
-        <button class="orangeButton" type="submit">Subscribe</button>
+        <button id="subscribeButton" class="orangeButton">Subscribe</button>
+        <div id="signupSuccess" class="signupResult hidden">
+          🥳 Great, please check emails to confirm
+        </div>
+        <div id="signupError" class="signupResult hidden">
+          😔 Something went wrong, please try again:
+          <span id="mailchimpError"></span>
+        </div>
       </form>
     </div>
   </section>
 
   <section class="supportMe">
     <h2>Support my content</h2>
-    <button class="whiteButton">Buy me a banana 🍌</button>
+    <button class="whiteButton">Buy me a treat 🍪</button>
   </section>
 </body>
 <script type="module" src="./main.js"></script>

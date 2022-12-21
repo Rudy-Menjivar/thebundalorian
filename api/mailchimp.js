@@ -30,7 +30,6 @@ export default async function handler(req, res) {
       );
 
       const data = await mailchimpRes.json();
-      console.log(data);
 
       if (!mailchimpRes.ok) {
         throw new Error(data.title);

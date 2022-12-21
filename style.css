@@ -78,6 +78,18 @@ body {
   padding: 10px;
 }
 
+.orangeButton:disabled {
+  background-color: #999999;
+}
+
+.signupResult {
+  padding: 8px 0px;
+}
+
+.hidden {
+  display: none;
+}
+
 .newsletter {
   padding: 16px 0px 8px 0px;
 }
