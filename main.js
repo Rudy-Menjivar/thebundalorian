@@ -13,3 +13,5 @@ import { stripeModal } from './stripeModal.js'
 
 mailchimpSubs();
 stripeModal();
+
+fetch("/api/analytics");
