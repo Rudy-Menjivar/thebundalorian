@@ -169,6 +169,12 @@ body {
   padding: 8px 0px;
 }
 
+#mailchimpError {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+}
+
 #products {
   display: flex;
   column-gap: 12px;
