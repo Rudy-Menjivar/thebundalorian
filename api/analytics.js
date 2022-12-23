@@ -34,6 +34,7 @@ export default async function handler(req, res) {
   } else {
     createVisitDay(unique);
   }
+  res.send(200);
 }
 
 const checkDayExists = async () => {
