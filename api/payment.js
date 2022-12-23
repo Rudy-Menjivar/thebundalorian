@@ -1,14 +1,12 @@
 
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
-console.log(stripe);
-
-const YOUR_DOMAIN = "http://localhost:3000";
+const YOUR_DOMAIN = process.env.DOMAIN;
 
 const productLookup = {
-    oneTreat: "price_1MHXH5DmqbAbXMI1LoV03p1J",
-    twoTreats: "price_1MHXHhDmqbAbXMI1nNCvpLjK",
-    fourTreats: "price_1MHXI5DmqbAbXMI13e8fbtLV",
+    oneTreat: process.env.ONE_TREAT,
+    twoTreats: process.env.TWO_TREATS,
+    fourTreats: process.env.FOUR_TREATS,
   };
 
   export default async function handler(req, res) {
